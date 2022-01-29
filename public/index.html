@@ -1,0 +1,55 @@
+<!-- credits to https://www.youtube.com/watch?v=kOJEWNPYBUo&t=978s -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Chatroom</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="screen join-screen active">
+        <div class="form">
+          <h2>Join Chatroom</h2>
+          <div class="form-input">
+            <label>UserName</label>
+            <input type="text" id="username" />
+            <label>Password</label>
+            <input type="password" id="password" />
+          </div>
+          <div class="form-input">
+            <button id="join-user">Join</button>
+            <button id="register-user">Register</button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="screen chat-screen">
+          <div class="header">
+            <div class="logo">Chatroom</div>
+            <button id="exit-chat">Exit</button>
+          </div>
+          <div>
+            <div class="messages">
+              <!-- Dummy msgs -->
+              <div class="message my-message"></div>
+              <div class="update"></div>
+              <div class="message other-message"></div>
+            </div>
+            <div class="typebox">
+              <input type="text" id="message-input" />
+              <button id="send-message">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="code.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  </body>
+</html>
